@@ -1,0 +1,315 @@
+/* Планшетная версия сайта */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .promo {
+    background-image: url(Img/hero-page-tablet.png);
+  }
+
+  .crown {
+    background-image: url(Img/catalog-tablet.png);
+  }
+
+  .top {
+    background-image: url(Img/card-tablet.png);
+  }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .header__content {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__logo-link {
+    display: none;
+  }
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* ГЛАВНАЯ СТРАНИЦА */
+  .page-index .promo__title {
+    position: absolute;
+    left: 24px;
+    top: 140px;
+    max-width: 786px;
+    font-size: 64px;
+    line-height: 70px;
+  }
+
+  .page-index .promo__text {
+    position: absolute;
+    left: 24px;
+    top: 296px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .page-index .promo__link {
+    position: absolute;
+    left: 24px;
+    top: 341px;
+  }
+
+  .page-index .products-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 29px;
+    row-gap: 39px;
+  }
+
+  .page-index .category-tile {
+    height: 268px;
+  }
+
+  .page-index .tile-text {
+    font-size: 26px;
+  }
+
+  /* Заголовки секций — по макету iPad: 48px, межстрочный 100% */
+  .section-main-title {
+    font-size: 48px;
+    line-height: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* КАТАЛОГ */
+  .page-catalogg .catalog__nav,
+  .page-catalogg .catalog__grid.grid {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .page-catalogg .catalog__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Ряд кнопок: зазор 10px как в макете; панель позиционируется от всего ряда */
+  .page-catalogg .catalog__filters {
+    display: flex;
+    gap: 10px;
+    position: relative;
+  }
+
+  /* Снимаем привязку панели к кнопке «Фильтрация» */
+  .page-catalogg .btn-form {
+    position: static;
+  }
+
+  /* Панель фильтров — правый край совпадает с «По популярности», как в макете */
+  .page-catalogg .catalog__filters .btn-form .form {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 541px;
+    padding: 40px 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+    box-sizing: border-box;
+    z-index: 100;
+  }
+
+  .page-catalogg .catalog__filters .btn-form .form .form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .page-catalogg .catalog__filters .btn-form .form .form-container .form-left-side {
+    width: 215px;
+  }
+
+  .page-catalogg .catalog__filters .btn-form .form .form-container .form-right-side {
+    width: 190px;
+  }
+
+  .page-catalogg .catalog__filters .btn-form .form .range-inputs {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    gap: 5px;
+  }
+
+  .page-catalogg .catalog__filters .btn-form .form .submit-filters-btn {
+    margin-left: auto;
+    margin-top: 24px;
+  }
+
+  .page-catalogg .catalog__grid.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 32px;
+  }
+
+  /* КОРЗИНА */
+  .page-card .cart-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-card .section-main-title {
+    width: 100%;
+  }
+
+  .page-card .furniture-categories-section,
+  .page-card .special-offers-section,
+  .page-card .catalog-product-section {
+    padding-bottom: 64px;
+  }
+
+  .page-card .checkout__left {
+    padding-bottom: 48px;
+  }
+
+  .page-card .checkout__header {
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #CACDD8;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .page-card .checkout__items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .page-card .checkout__item-image {
+    width: 173px;
+    height: 173px;
+    flex-shrink: 0;
+  }
+
+  .page-card .checkout__item-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .page-card .checkout__item-description {
+    font-size: 14px;
+    color: #888888;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    max-width: 400px;
+  }
+
+  .page-card .checkout__item-price {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .page-card .checkout__item-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-card .checkout__item-right {
+    flex-shrink: 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .page-card .checkout__footer {
+    margin-top: 32px;
+  }
+
+  .page-card .cart-form__block {
+    width: 100%;
+    max-width: 379px;
+    margin-left: 0;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .page-card .product-img-container img,
+  .page-card .card__image img {
+    object-fit: cover;
+  }
+
+  .page-card .catalog-more,
+  .page-card .show-more-box {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .page-card .catalog-more__btn,
+  .page-card .show-more-btn {
+    text-align: left;
+    margin: 0;
+  }
+
+  .page-card .products-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 29px;
+    row-gap: 39px;
+  }
+
+  .page-card .show-more-box {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 0;
+    padding-top: 24px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .page-card .show-more-btn {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.4;
+    text-decoration: underline;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+  }
+}
