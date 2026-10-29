@@ -1,0 +1,350 @@
+/* ===== КОРЗИНА ===== */
+
+.top {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  background-image: url(img/card.jpg);
+}
+
+.top__header {
+  color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 435px;
+}
+
+.top__title {
+  position: absolute;
+  font-weight: 600;
+  width: 292px;
+  top: 204px;
+  font-size: 64px;
+  line-height: 70px;
+}
+
+.checkout {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.cart-form {
+  display: grid;
+  grid-template-columns: 1fr 379px;
+  align-items: start;
+  gap: 33px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 64px;
+}
+
+/* Левая колонка */
+.checkout__left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Шапка колонок «Товар» / «К-во» */
+.checkout__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #cacaca;
+  height: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.checkout__header-title {
+  font-size: 13px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.checkout__items {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Карточка товара */
+.checkout__item {
+  display: flex;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-bottom: 1px solid #cacaca;
+  gap: 32px;
+}
+
+.checkout__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+
+.checkout__item-image {
+  width: 173px;
+  height: 173px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.checkout__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.checkout__img:hover {
+  transform: scale(1.2);
+}
+
+/* Контент — по вертикальному центру картинки */
+.checkout__item-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.checkout__item-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.checkout__item-description {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-width: 400px;
+}
+
+.checkout__item-price {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-bottom: 16px;
+}
+
+
+.checkout__item-actions {
+  display: flex;
+  gap: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.checkout__item-actions .btn-action {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 400;
+  height: auto;
+  border-radius: 0;
+}
+
+.checkout__item-actions .btn-action:hover {
+  text-decoration: underline;
+  transform: none;
+  box-shadow: none;
+}
+
+
+.checkout__item-right {
+  flex-shrink: 0;
+  margin-left: auto;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.stepper {
+  position: relative;
+}
+
+.stepper__input {
+  width: 71px;
+  height: 51px;
+  background-color: #F7F6F6;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 20px;
+}
+
+.stepper__input::-webkit-outer-spin-button,
+.stepper__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.stepper__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.stepper__arrows {
+  position: absolute;
+  right: 8px;
+  top: 48%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+
+.stepper__btn_plus,
+.stepper__btn_minus {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
+.stepper__btn_plus {
+  background-image: url(img/plus.png);
+}
+
+.stepper__btn_minus {
+  background-image: url(img/minus.png);
+}
+
+/* Кнопки под списком */
+.checkout__footer {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-footer-action {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  padding: 10px 28px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a.btn-footer-action {
+  text-decoration: none;
+}
+
+.btn-footer-action:hover {
+  transform: scale(1.05);
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* ===== ПРАВАЯ ЧАСТЬ: Оформление заказа ===== */
+.cart-form__block {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 379px;
+  height: 556px;
+}
+
+.cart-form__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.cart-form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cart-form__inputs input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #cacaca;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #000000;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.cart-form__inputs input::-moz-placeholder {
+  color: #888888;
+}
+
+.cart-form__inputs input::placeholder {
+  color: #888888;
+}
+
+.cart-form__inputs input:focus {
+  border-color: #000000;
+}
+
+.cart-form__total {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+        margin-top: 67px;
+        margin-bottom: 28px;
+    
+}
+
+.cart-form__total span {
+  font-weight: 500;
+}
+
+.cart-form__submit {
+  position: relative;
+  padding: 16px;
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.cart-form__submit:hover {
+  transform: scale(1.05);
+  background-color: #000000;
+  color: #FFFFFF;
+}
